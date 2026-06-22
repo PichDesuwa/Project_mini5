@@ -34,7 +34,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="157.0" fitWidth="152.0" layoutX="-4.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../Project_mini3/ITC.png" />
          </image>
