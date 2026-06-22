@@ -25,7 +25,8 @@ public class Controller {
     @FXML
     void on_go_input(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(new File("scene_input/view.fxml").toURI().toURL());
+            var viewInput = getClass().getResource("/scene_input/view.fxml");
+            FXMLLoader loader = new FXMLLoader(viewInput);
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.getScene().setRoot(root);
@@ -38,7 +39,8 @@ public class Controller {
     @FXML
     void on_go_output(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(new File("scene_output/view.fxml").toURI().toURL());
+            var viewOutput = getClass().getResource("/scene_output/view.fxml");
+            FXMLLoader loader = new FXMLLoader(viewOutput);
             Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.getScene().setRoot(root);
