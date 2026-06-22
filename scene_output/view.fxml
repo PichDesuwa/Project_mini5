@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="scene_output.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="output_data" layoutX="144.0" layoutY="122.0" text="Output data:">
          <font>
@@ -15,6 +15,6 @@
          </font>
       </Label>
       <TextField fx:id="text_field" layoutX="270.0" layoutY="120.0" prefHeight="35.0" prefWidth="171.0" />
-      <Button fx:id="button_close" layoutX="215.0" layoutY="188.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="83.0" text="Close" />
+      <Button fx:id="button_close" layoutX="215.0" layoutY="188.0" mnemonicParsing="false" onAction="#on_close" prefHeight="44.0" prefWidth="83.0" text="Close" />
    </children>
 </AnchorPane>

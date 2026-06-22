@@ -1,4 +1,6 @@
 package scene_main;
+
+import global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 
 public class Controller {
@@ -21,6 +22,11 @@ public class Controller {
 
     @FXML
     private Label label_data;
+
+    @FXML
+    void initialize() {
+        label_data.setText("Data: " + Global.getData());
+    }
 
     @FXML
     void on_go_input(ActionEvent event) {

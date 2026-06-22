@@ -1,8 +1,11 @@
-import java.io.IOException;
+package scene_input;
 
+import java.io.IOException;
+import global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -12,21 +15,22 @@ public class Controller {
     private TextField input_field;
 
     @FXML
+    private Button save;
+
+    @FXML
     void on_save(ActionEvent event) throws IOException {
+        Global.setData(input_field.getText());
 
         var stage = (Stage) input_field.getScene().getWindow();
+        var view_main = getClass().getResource("/scene_main/view.fxml");
+        var controller_main = new scene_main.Controller();
 
-        var view_output = getClass().getResource("scene_output/view.fxml");
-        var controller_output = new scene_main.Controller();
-
-        var loader = new javafx.fxml.FXMLLoader();
-        loader.setController(controller_output);
-        loader.setLocation(view_output);
+        var loader = new javafx.fxml.FXMLLoader(view_main);
+        loader.setController(controller_main);
 
         var scene = new Scene(loader.load());
-        stage.setScene(scene); 
+        stage.setScene(scene);
         stage.show();
-
     }
 
 }
